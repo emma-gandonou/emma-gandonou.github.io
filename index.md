@@ -1,9 +1,9 @@
 # Title: Video Treasure Finder
 
-<video width="360" height="640" controls>
+<video width="560" height="315" controls>
   <source src="Failure.mp4" type="video/mp4">
 </video>
-<video width="360" height="640" controls>
+<video width="560" height="315" controls>
   <source src="Success.mp4" type="video/mp4">
 </video>
 
