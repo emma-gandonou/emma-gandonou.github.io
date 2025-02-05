@@ -1,13 +1,17 @@
-# Example of a Failure Video
+# Failure Video...
 
-<video width="560" height="315" controls>
-  <source src="Failure.mp4" type="video/mp4">
-</video>
+<div style="text-align: center;">
+  <video width="560" height="315" controls>
+    <source src="Failure.mp4" type="video/mp4">
+  </video>
+</div>
 
-# Example of a Success Video
-<video width="560" height="315" controls>
-  <source src="Success.mp4" type="video/mp4">
-</video>
+# Success Video!
+<div style="text-align: center;">
+  <video width="560" height="315" controls>
+    <source src="Success.mp4" type="video/mp4">
+  </video>
+</div>
 
 ## Project Description
 
