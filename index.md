@@ -1,8 +1,10 @@
-# Title: Video Treasure Finder
+# Example of a Failure Video
 
 <video width="560" height="315" controls>
   <source src="Failure.mp4" type="video/mp4">
 </video>
+
+# Example of a Success Video
 <video width="560" height="315" controls>
   <source src="Success.mp4" type="video/mp4">
 </video>
