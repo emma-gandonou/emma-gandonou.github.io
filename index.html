@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CS152 Project</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: darkblue;
+      text-align: center;
+    }
+
+    h2 {
+      color: darkblue;
+      text-align: center;
+    }
+
+    h3 {
+      color: darkblue;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .caption {
+      text-align: left;
+      font-style: italic;
+      color: #555;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .image-container {
+      display: inline-block;
+      text-align: center;
+      margin: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Abstract</h1>
+  <p>Sleepiness while driving contributes to around 3 - 30% of global road accidents and 21% of fatal car collisions, and driving after 17–19 hours awake impairs psychomotor function to the level of 0.05% blood alcohol concentration (WHO, NSF 2025, Dawson 1997). To address this safety issue, we developed a convolutional neural network (CNN)–based system that detects driver drowsiness in real-time, with a particular focus on individuals wearing eyeglasses. Our system utilizes Tensorflow, MobileNetV2, Gradio, Python, JupyterHub, and Google Colab notebooks. We trained our model on two datasets— Driver Drowsiness Dataset and NTHU-DDD — comparing the two to determine which dataset would give better results (Nasri et al. 2022, Banudeep 2019). Ethical considerations include not storing user input data and balanced representation across age, gender, and racial groups. Challenges we faced include overfitting and GPU usage, and fixes we implemented include data augmentation, early stopping, regularization, and using Google Colab instead of JupyterHub. Future work could focus on implementing an app, accepting live video as model input, improving performance on mobile devices with low-quality cameras, and integrating our model with vehicle hardware. With further development, this specialized drowsiness detection system has the potential to save thousands of lives by providing alerts to drowsy drivers on roads worldwide.
+</p>
+    <h1>Introduction</h1>
+    <p>Our project tackles an essential issue in today’s society– drowsy driving. Recent studies estimate that drowsy driving is a factor in 1.5 million car collisions every year in the U.S., causing over 8000 fatalities and 70,000 injuries (Geotab, 2024). Driving with sleep deprivation has been shown to be equivalent to driving while intoxicated; subjects who were kept awake for 17-19 hours showed psychomotor impairment equivalent to blood alcohol concentration levels of 0.05% (Dawson, 1997). Psychomotor impairment refers to slowed thinking and reaction time, and reduced physical movements. For comparison, the standard alcohol drink (5 ounces of wine, 1.5 ounces of 80-proof liquor, or 12 ounces of beer) raises blood alcohol concentration levels by around 0.02% to 0.03%. Additionally, drowsy drivers usually drastically underestimate their drowsiness, with 75% of drivers rating themselves as having low drowsiness being moderately to severely drowsy (Bayne et al. 2022). 
+    </p>
+    <p>Therefore, drowsiness is dangerous not only for drivers but also for their passengers and everyone else on the road. To address this problem, our project will focus on training a neural network capable of detecting drowsiness in drivers. A lot of technology has been developed targeting this issue, which provides a solid foundation for our project.  However, unlike existing systems, ours will also focus on individuals with glasses, so that the drowsiness detection system can provide the correct results for those individuals. People with glasses are often neglected when it comes to facial detection systems, and we would like to address this negligence. 
+    </p>
+    <h1>Ethical Considerations</h1>
+    <p>There were numerous ethical considerations we took into account when developing our model. First of all, we ensured that our model was trained on a diverse set of data consisting of different demographic groups: people of all races, genders, and ages. Secondly, we understand and prioritize the importance of users’ privacy, which is why, by using Gradio, we ensured that inputted biometric data is not used or stored permanently, and any data uploaded is automatically deleted after a session. Although we developed our model ethically to the best of our capabilities by following the guidelines stated above, we believe our model has shortcomings, as it is very young and needs extensive time and resources to be developed in a completely ethical way.  For example, using an even more diverse and extensive dataset to ensure accuracy for all types of faces. If given more time, we would train the model on additional tens of thousands of images to make it more accurate. We would also consider training our model in diverse sets of environments: day, night, cloudy, rainy, or clear weather.</p>
+    <h1>Related Works</h1>
+    <p>Existing drowsiness detection systems use feed-forward neural networks (NNs) and CNNs. Salem & Waleed (2024) explore real-time drowsiness detection using CNNs and transfer learning, achieving 90-99.86% accuracy across multiple datasets. It integrates pre-trained models like MobileNetV2, InceptionV3, and Haar Cascade for feature extraction, and a mobile application for real-world use in driver safety (Salem & Waleed, 2024). The study highlights the importance of dataset diversity, bias mitigation, and real-time performance to ensure reliable drowsiness detection.
+    </p>
+    <p>Inkeaw et al. (2022) developed a Neural Network (NN)-based drowsiness detection system using visual facial descriptors like eye aspect ratio (EAR), mouth aspect ratio (MAR), face length (FL), and face width balance (FWB). The system integrates EEG-based microsleep detection with facial feature analysis, achieving 72.25% sensitivity and 60.40% accuracy when using Discrete Fourier Transform (DFT) with ANN. The research highlights limitations in practicality, requiring preset camera positions and restrictions on wearing sunglasses while emphasizing the potential for real-world driver alert systems.</p>
+    <p>Albadawi et al. (2022) review recent advancements in driver drowsiness detection, categorizing approaches into physiological, behavioral, and vehicle-based methods. Physiological methods leverage EEG, ECG, and other biometric signals, while behavioral methods focus on facial expressions, eye closure, and head movements. Vehicle-based methods analyze driving patterns, including lane deviation and steering angle changes. The review discusses challenges such as real-time implementation, sensor reliability, and environmental conditions affecting detection accuracy. The paper also highlights the integration of machine learning techniques to enhance detection precision and adaptability across different driving conditions.
+    </p>
+    <p>Chinthalachervu et al. (2022) developed a system for detecting drowsiness in real-time. The driver’s facial expressions are captured and recorded using a webcam. The system calculates the eye aspect ratio, mouth opening ratio, and nose length ratio. The calculated values are compared to threshold values developed by the system, and the difference in value leads to detection.
+    </p>
+    <p>Some current products employing drowsiness detection include Motive’s Drowsiness AI and Bosch’s Driver Drowsiness Detection. Motive’s product is a camera with AI that alerts drivers when they are yawning or have closed their eyes. The camera beeps and tells drivers to pull over and take a break. Bosch Mobility uses a steering angle sensor to determine the steering angle and steering angle velocity. Measuring these factors allows the system to monitor the steering movements and advise drivers to take a break in time. 
+    </p>
+    <h1>Methodology</h1>
+    <p>We built a driver drowsiness detection system using the CNN model. We utilized the pretrained model MobileNetV2  as a base, adding our own drowsy vs nondrowsy classification layer on top. Python, JupyterHub, Google Colab, and Tensorflow were the main tools of development. Our model was trained on two datasets: Driver Drowsiness Dataset (which had about 41,790 images) and NTHU-DDD (which had about 66,500 images) (Nasri et al. 2022, Banudeep 2019). Because the latter dataset is much larger than the former, we decided to train our model on each of the datasets separately to determine which dataset would provide us with the best results. Additionally, the NTHU-DDD dataset’s images are in grayscale, and we aimed to find if there was a significant effect due to this difference. 
+    </p>
+    <p>Some of the pitfalls we encountered were drastic overfitting and lengthy run times, which we attempted to address by using the GPU rather than the CPU, and using multiple methods, including regularization, dropout layers, different batch sizes, early stopping, fine-tuning, and data augmentation. In the next section, we will outline our solutions in greater detail. </p>
+    <p>Finally, after training the model using Google Colab with the best hyperparameters and the best dataset, we wrapped the final model with Gradio in JupyterHub. By assigning a port number and using our terminal, we were able to get a web page running with a public link where we could upload a picture of a face, and the model would output “Drowsiness detected” or “No drowsiness”.
+    </p>
+    <h1>Challenges</h1>
+    <h2>Overfitting</h2>
+    <p>The largest challenge that we faced while training our model was significant overfitting. Over epochs, validation accuracy would decrease while validation loss would increase. Figure 1 displays our first results.
+    </p>
+    <h3>Figure 1</h3>
+    <img src="image.jpg" alt="Description of image">
+    <h1>Results</h1>
+    <h1>Discussion</h1>
+    <h1>Future Work</h1>
+    <h1>Reflection</h1>
+</body>
+</html>
